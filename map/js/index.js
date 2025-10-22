@@ -64,6 +64,12 @@ const LANDMARKS = {
   3: { name: "hazards" },
   4: { name: "cursed" },
   5: { name: "ruins" },
+  6: { name: "bridges" },
+  7: { name: "ponds" },
+  8: { name: "chapels" },
+  9: { name: "grottos" },
+  10: { name: "fountains" },
+  11: { name: "willows" },
 };
 
 const DEFAULT_REALM_CFG = {
@@ -204,12 +210,12 @@ function renderGrid(options = {}) {
                     <div class="overlay landmark-behind"></div>
                     <img class="overlay landmark"
                       src="${IMG_BASE_PATH}landmarks/${
-                       LANDMARKS[tile.landmark].name
-                     }.svg"></img>
+                        LANDMARKS[tile.landmark].name
+                      }.svg"></img>
                     <img class="overlay landmark-bg"
                       src="${IMG_BASE_PATH}landmarks/bg/${
-                       LANDMARKS[tile.landmark].name
-                     }.svg"></img>`
+                        LANDMARKS[tile.landmark].name
+                      }.svg"></img>`
                    : ""
                }
               <img class="map-tile" 
@@ -603,7 +609,7 @@ function populateTile(options = {}) {
       const neighbors = scanNeighbors({ tiles, x, y });
       const canPlace =
         neighbors.find((n) =>
-          LANDSCAPES[landscape].connectsTo.find((l) => l === n.landscape)
+          LANDSCAPES[landscape].connectsTo.find((l) => l === n.landscape),
         ) || neighbors.find((n) => n.landscape === landscape);
       return canPlace;
     }
@@ -1157,7 +1163,7 @@ async function editTile(tile, ev, position) {
         cancel: () => {
           $(ev.currentTarget).removeClass("focused");
         },
-      }
+      },
     );
   });
 }
@@ -1221,7 +1227,7 @@ async function promptUpload() {
           });
           resolve();
         },
-      }
+      },
     );
   });
 }
@@ -1284,7 +1290,7 @@ $(document).ready(() => {
       This action cannot be undone`,
       {
         confirm: () => stashLocal(index),
-      }
+      },
     );
   });
   $(document).on("click", ".load-map", (ev) => {
@@ -1296,7 +1302,7 @@ $(document).ready(() => {
       This action cannot be undone`,
       {
         confirm: () => loadLocalStash(index),
-      }
+      },
     );
   });
 
@@ -1327,7 +1333,7 @@ $(document).ready(() => {
       JSON.stringify(data),
       "map-player-ver.json",
       "text/json",
-      ev.currentTarget
+      ev.currentTarget,
     );
   });
 
