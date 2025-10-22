@@ -786,7 +786,15 @@ function generateRealm(options = {}) {
    * Place landmarks
    */
   for (const [id] of Object.entries(LANDMARKS)) {
-    const count = randInt(landmarkMin, landmarkMax + 1);
+    let count = randInt(landmarkMin, landmarkMax + 1);
+    if (parseInt(id) === 7) {
+      // ponds
+      count = 2;
+    }
+    if (parseInt(id) === 9 || parseInt(id) === 10 || parseInt(id) === 11) {
+      // grottos, fountains, willows
+      count = 3;
+    }
     for (let i = 0; i < count; i++) {
       // find a random unoccupied position
       let position = [
