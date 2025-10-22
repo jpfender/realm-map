@@ -33,6 +33,126 @@ const LAND_LANDSCAPES = [
   "plain",
 ];
 
+const WATER_TONE = [
+  "crystal",
+  "teal",
+  "pearlescent",
+  "mucky",
+  "cobalt",
+  "verdant",
+  "frosted",
+  "dark",
+  "verdigris",
+  "silver",
+  "emerald",
+  "jade",
+];
+
+const WATER_TEXTURE = [
+  "silk",
+  "ripples",
+  "abyss",
+  "churn",
+  "froth",
+  "mirror",
+  "surge",
+  "glass",
+  "surf",
+  "rapids",
+  "spray",
+  "bubbles",
+];
+
+const FLORA_NATURE = [
+  "aromatic",
+  "ashen",
+  "blooming",
+  "twisted",
+  "towering",
+  "fruitful",
+  "stinging",
+  "vibrant",
+  "brittle",
+  "thorny",
+  "sturdy",
+  "resinous",
+];
+
+const FLORA_FORM = [
+  "grasses",
+  "heather",
+  "shrubs",
+  "brambles",
+  "canopy",
+  "ferns",
+  "trunks",
+  "vines",
+  "conifers",
+  "saplings",
+  "reeds",
+  "roots",
+];
+
+const FAUNA_NATURE = [
+  "watchful",
+  "helpful",
+  "graceful",
+  "loud",
+  "mischievous",
+  "deceitful",
+  "enlightening",
+  "placid",
+  "beautiful",
+  "mighty",
+  "hostile",
+  "aloof",
+];
+
+const FAUNA_FORM = [
+  "ungulates",
+  "songbirds",
+  "canines",
+  "rodents",
+  "amphibians",
+  "insects",
+  "felines",
+  "reptiles",
+  "hawks",
+  "mustelids",
+  "fowl",
+  "bears",
+];
+
+const FEATURE_NATURE = [
+  "buried",
+  "colourful",
+  "adorned",
+  "spiked",
+  "split",
+  "entombed",
+  "reflective",
+  "veiled",
+  "hot",
+  "drowned",
+  "desecrated",
+  "isolated",
+];
+
+const FEATURE_FORM = [
+  "brook",
+  "seat",
+  "pit",
+  "cave",
+  "monolith",
+  "mound",
+  "cairn",
+  "pond",
+  "waterfall",
+  "spring",
+  "arch",
+  "henge",
+];
+
 const HOLDING_OFFSET = 20;
 const N_HOLDINGS = 4;
 const DEFAULT_MAXLAND = 12;
